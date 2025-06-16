@@ -58,3 +58,40 @@ A well-designed booking system directly impacts conversion rates and user satisf
 3. **Enhances Accessibility**: Simple designs work for all user types
 4. **Improves Efficiency**: Users complete tasks faster with intuitive layouts
 5. **Mobile Optimization**: Critical as >50% of bookings happen on mobile
+
+
+
+### Figma Design Specifications
+
+**Color Styles:**
+- `Primary`: #FF5A5F (Used for main actions and important elements)
+- `Secondary`: #008489 (Used for secondary actions and highlights)
+- `Background`: #FFFFFF (Main background color)
+- `Text`: #222222 (Primary text color)
+- `Secondary Text`: #717171 (For less important text)
+
+**Typography:**
+- **Primary Font**: 
+  - Family: Circular
+  - Weight: Medium (500)
+  - Size: 16px (base size for most text)
+- **Headings**:
+  - Family: Circular
+  - Weight: Bold (700)
+  - Sizes: 24px-32px (depending on heading level)
+- **Secondary Text**:
+  - Family: Circular
+  - Weight: Book (400)
+  - Size: 14px
+
+### Importance of Identifying Design Properties
+Documenting design specifications from mockups is crucial because:
+
+1. **Consistency**: Ensures uniform styling across all components and pages
+2. **Developer Handoff**: Provides exact values for implementation
+3. **Design System**: Forms the foundation for scalable UI development
+4. **Brand Identity**: Maintains visual coherence with the original design
+5. **Efficiency**: Reduces guesswork and back-and-forth between designers and developers
+6. **Accessibility**: Helps maintain proper contrast ratios and readable typography
+
+These specifications directly from Figma serve as the single source of truth for the visual design implementation.
