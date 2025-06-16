@@ -94,4 +94,90 @@ Documenting design specifications from mockups is crucial because:
 5. **Efficiency**: Reduces guesswork and back-and-forth between designers and developers
 6. **Accessibility**: Helps maintain proper contrast ratios and readable typography
 
-These specifications directly from Figma serve as the single source of truth for the visual design implementation.
+
+## Project Roles and Responsibilities
+
+### Core Team Structure
+
+| Role | Key Responsibilities | Contribution to Project |
+|------|----------------------|-------------------------|
+| **Product Owner** | - Defines project vision and priorities <br> - Maintains product backlog <br> - Approves feature completion | Ensures the product meets business objectives and user needs |
+| **Scrum Master** | - Facilitates agile ceremonies <br> - Removes blockers <br> - Ensures team follows agile practices | Keeps development process efficient and aligned with methodology |
+| **Project Manager** | - Coordinates timelines and resources <br> - Manages risks and dependencies <br> - Facilitates cross-team communication | Maintains project organization and on-time delivery |
+| **UI/UX Designer** | - Creates wireframes and prototypes <br> - Develops design system <br> - Conducts user research | Ensures intuitive, visually appealing user experiences |
+| **Frontend Developer** | - Implements UI components <br> - Integrates with backend APIs <br> - Optimizes client-side performance | Builds the interactive user interface |
+| **Backend Developer** | - Develops APIs and services <br> - Implements business logic <br> - Manages database operations | Provides reliable data infrastructure and functionality |
+| **QA Engineer** | - Creates test plans <br> - Executes manual/automated tests <br> - Reports and verifies bugs | Ensures product quality and stability |
+| **DevOps Engineer** | - Manages CI/CD pipelines <br> - Configures infrastructure <br> - Monitors production systems | Enables smooth deployment and reliable operations |
+
+### Cross-Functional Responsibilities
+1. **All Technical Roles**: Participate in code reviews and architectural decisions
+2. **Design & Development**: Collaborate on design system implementation
+3. **Product & QA**: Work together on acceptance criteria definition
+4. **Scrum Team**: Attend daily standups and sprint planning sessions
+
+### Success Metrics
+- Clear ownership of components/features
+- Regular cross-role communication
+- Documented handoff processes between disciplines
+- Shared understanding of project goals
+
+
+## UI Component Patterns
+
+### Core Reusable Components
+
+#### 1. Navbar
+**Purpose:** Global navigation and search functionality  
+**Structure:**
+- **Logo**: Clickable Airbnb-branded logo (links to homepage)
+- **Search Bar**: Interactive search with location/date filters
+- **User Navigation**: Profile menu with auth states (logged in/out)
+- **Responsive Menu**: Hamburger menu for mobile views
+
+**Features:**
+- Sticky positioning (remains visible on scroll)
+- Dynamic background (transparent → solid on scroll)
+- Mobile-optimized touch targets
+
+#### 2. Property Card
+**Purpose:** Display property preview in listings  
+**Structure:
+- **Property Image**: Hero image with hover zoom effect
+- **Basic Details**:
+  - Price (with dynamic formatting)
+  - Location (truncated intelligently)
+  - Rating (star-based with count)
+- **Favorite Button**: Heart icon with persistence
+
+**Features:**
+- Responsive grid layout
+- Loading skeleton states
+- Accessibility-compliant contrast ratios
+- Hover animations (elevation and scale)
+
+#### 3. Footer
+**Purpose:** Site-wide information and navigation  
+**Structure:**
+- **Site Links**: Organized columns (Support, Community, etc.)
+- **Company Info**: About, Careers, Newsroom
+- **Social Media**: Icon links to platforms
+- **Copyright**: Legal text and language selector
+
+**Features:**
+- Responsive column stacking
+- Consistent across all pages
+- Subtle branding elements
+
+### Implementation Principles
+1. **Atomic Design**:
+   - Build from small atoms (buttons) to complex organisms (cards)
+   
+2. **Props-based Customization**:
+   ```jsx
+   <PropertyCard 
+     title="Beachfront Villa" 
+     price={120} 
+     rating={4.92} 
+     isFavorite={false}
+   />
